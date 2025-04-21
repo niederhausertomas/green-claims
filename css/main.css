@@ -1,0 +1,150 @@
+*{
+font-family: sans-serif;
+color: #32302c;
+}
+
+header{
+    height: 180px; 
+    overflow: hidden;   
+}
+
+.container{
+    max-width: 85%;
+    margin: auto;
+}
+
+.eco-guide-title{
+    font-weight: bolder;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.answer-option:checked + .label {
+    background-color: #cce5ff; 
+    border-radius: 5px; 
+    padding: 5px; 
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+.measuring{
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.responseContainer{
+    display: flex;
+    width: 100%;
+    background-color: red;
+}
+
+
+#questionsForm{
+    width: 100%;
+}
+
+.questions {
+    display: flex;
+}
+
+.questions td:first-child {
+    flex: 0 0 85%;
+    align-items: center;
+}
+
+.questions td:last-child {
+    flex: 0 0 20%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .containerChart {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: none;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .score-section {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+  
+  .score-label {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .interpretation-section {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .interpretation-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .interpretation-block {
+    margin-bottom: 30px;
+  }
+  
+  .interpretation-block .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .green {
+    background-color: #2ecc71;
+  }
+  
+  .yellow {
+    background-color: #f1c40f;
+  }
+  
+  .red {
+    background-color: #e74c3c;
+  }
+  
+  .interpretation-block p {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+    line-height: 1.5;
+  }
