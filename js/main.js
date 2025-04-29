@@ -1,6 +1,14 @@
 let yesCount = 0;
 let answerCount = 0;
 
+// Agregar evento de clic al botón Start now
+document.querySelector('.startNow').addEventListener('click', function() {
+    const questionsForm = document.getElementById('questionsForm');
+    questionsForm.scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+});
+
 function updateYesCount() {
     yesCount = 0; 
     answerCount = 0;
@@ -15,13 +23,12 @@ function updateYesCount() {
         }
     }
 
-    // Mostrar u ocultar la sección del gráfico
     if (answerCount === 20) {
-        document.querySelector('.containerChart').style.display = 'flex'; // Mostrar el gráfico
-        document.getElementById('questionsForm').style.display = 'none'; // Ocultar las preguntas
+        document.querySelector('.containerChart').style.display = 'flex'; 
+        document.getElementById('questionsForm').style.display = 'none'; 
     } else {
-        document.querySelector('.containerChart').style.display = 'none'; // Ocultar el gráfico
-        document.getElementById('questionsForm').style.display = 'block'; // Mostrar las preguntas
+        document.querySelector('.containerChart').style.display = 'none'; 
+        document.getElementById('questionsForm').style.display = 'block';
     }
 
     updateChart(yesCount);
@@ -44,11 +51,10 @@ function updateChart(yesCount) {
         datasets: [{
             label: 'Cantidad de respuestas',
             data: [yesCount, 20 - yesCount],
-            backgroundColor: ['#2c95e9', 'rgba(255, 0, 0, 0)'],
+            backgroundColor: ['#2c95e9', '#CACACA'],
         }]
     };
     
-    // Plugin para mostrar texto en el centro
     const centerTextPlugin = {
         id: 'centerText',
         beforeDraw(chart) {
@@ -80,7 +86,12 @@ function updateChart(yesCount) {
             data: chartData,
             options: {
                 responsive: true,
-                cutout: '75%',
+                cutout: '80%',
+                elements: {
+                    arc: {
+                        borderRadius:  [20, 0]
+                    }
+                }
             },
             plugins: [centerTextPlugin]
         });

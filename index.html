@@ -7,30 +7,19 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<header>
-    <img src="images/cover-header.webp" alt="Banner" style="width: 100%; ">
-</header>
+
 <body>
 
     <div class="container">
-        <h2 class="eco-guide-title">Green Claims Cheat Sheet for Fashion</h2>
+        <h1 class="eco-guide-title">Green Claims Cheat Sheet for Fashion</h1>
 
-        <h2>Evaluate your sustainability messages and avoid greenwashing.</h2>
+        <h2 class="subtitle">Avoid greenwashing following this practical guide to assess whether your green claims follow best communication practices, EU regulations, and consumer expectations.</h2>
+
+        <button class="startNow">
+            <p>Start now</p>
+        </button>
         
-        <h3>🧭 What is this? </h3>
-        <div>
-            <div>
-                <h3>A quick and practical guide to assess whether your environmental claims follow best communication practices, EU regulations, and consumer expectations.</h3>
-            </div>
-            <div>
-                <p>⚠️ This tool is not legal advice, but it’s a great first step to spot potential risks.</p>
-            </div>
-        </div>
-
-        <div class="block">
-            <h2>✅ What should you evaluate?  </h2>
-            <p>Answer “Yes”, “No” or “Not Applicable” to each of the key questions.</p>
-        </div>
+        <h3 class="answerThese">Answer these key questions according to the criteria your claim meets, and check your score at the end!</h3>
 
         <form id="questionsForm" onsubmit="handleSubmit(event)">
             <table class="w-full">
@@ -43,161 +32,148 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="questions">
-                        <td>1. Is your environmental claim based on recognized scientific research and industry best practices?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">1. Is your environmental claim based on recognized scientific research?</td>
+                        <td class="group">
                             <input type="radio" name="q1" value="yes"> Yes
                             <input type="radio" name="q1" value="no"> No
-                            <input type="radio" name="q1" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>2. Have you assessed the impacts using a life-cycle perspective?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">2. Have you assessed the impacts using a life-cycle perspective?</td>
+                        <td class="group">
                             <input type="radio" name="q2" value="yes"> Yes
                             <input type="radio" name="q2" value="no"> No
-                            <input type="radio" name="q2" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>3. Have you clearly indicated whether the claim applies to the whole product or just part of it?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">3. Have you indicated whether the claim applies to the whole product or just part of it?</td>
+                        <td class="group">
                             <input type="radio" name="q3" value="yes"> Yes
                             <input type="radio" name="q3" value="no"> No
-                            <input type="radio" name="q3" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>4. Are you using accurate, primary, or secondary data to support your claims?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">4. Are you using accurate, primary, or secondary data to support your claims?</td>
+                        <td class="group">
                             <input type="radio" name="q4" value="yes"> Yes
                             <input type="radio" name="q4" value="no"> No
-                            <input type="radio" name="q4" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>5. Do you reference scientifically based impact indicators (e.g., water scarcity, global warming)?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">5. Do you mention the impact indicator being referenced in your claim?</td>
+                        <td class="group">
                             <input type="radio" name="q5" value="yes"> Yes
                             <input type="radio" name="q5" value="no"> No
-                            <input type="radio" name="q5" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>6. Do you mention the impact indicator being referenced in your claim?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">6. Do you reference scientifically based impact indicators (e.g., water scarcity, global warming)?</td>
+                        <td class="group">
                             <input type="radio" name="q6" value="yes"> Yes
                             <input type="radio" name="q6" value="no"> No
-                            <input type="radio" name="q6" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>7. When communicating impact metrics, do you maintain the unit of measurement and the 'eq' (e.g., CO₂ eq)?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">7. Do you maintain the unit of measurement and the 'eq' (e.g., CO₂ eq)?</td>
+                        <td class="group">
                             <input type="radio" name="q7" value="yes"> Yes
                             <input type="radio" name="q7" value="no"> No
-                            <input type="radio" name="q7" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>8. Are you avoiding vague or misleading terms like "eco-friendly", or have you explained what they actually mean?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">8. Are you avoiding vague or misleading terms like "eco-friendly"?</td>
+                        <td class="group">
                             <input type="radio" name="q8" value="yes"> Yes
                             <input type="radio" name="q8" value="no"> No
-                            <input type="radio" name="q8" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>9. If you're using terms with assumed meanings (e.g., "organic," "biodegradable"), are they accurate and properly justified?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">9. If using terms with assumed meanings (e.g., "organic," "biodegradable"), are they properly justified?</td>
+                        <td class="group2">
                             <input type="radio" name="q9" value="yes"> Yes
                             <input type="radio" name="q9" value="no"> No
                             <input type="radio" name="q9" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>10. Can your claims be easily understood by consumers, avoiding technical or confusing language?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">10. Can your claims be easily understood by consumers, avoiding technical or confusing language?</td>
+                        <td class="group">
                             <input type="radio" name="q10" value="yes"> Yes
                             <input type="radio" name="q10" value="no"> No
-                            <input type="radio" name="q10" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>11. Is your claim clearly more than just meeting legal requirements or standard industry practices?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">11. Is your claim clearly more than just meeting legal requirements or standard industry practices?</td>
+                        <td class="group">
                             <input type="radio" name="q11" value="yes"> Yes
                             <input type="radio" name="q11" value="no"> No
-                            <input type="radio" name="q11" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>12. Has your claim been verified by a third party, not just self-verified?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">12. Has your claim been verified by a third party, not just self-verified?</td>
+                        <td class="group">
                             <input type="radio" name="q12" value="yes"> Yes
                             <input type="radio" name="q12" value="no"> No
-                            <input type="radio" name="q12" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>13. Have you provided access to substantiating evidence, such as studies, calculations, or third-party verifications?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">13. Have you provided access to substantiating evidence?</td>
+                        <td class="group">
                             <input type="radio" name="q13" value="yes"> Yes
                             <input type="radio" name="q13" value="no"> No
-                            <input type="radio" name="q13" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>14. If you're using sustainability-related visuals (like nature imagery), do they accurately reflect reality?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">14. If you're using sustainability-related visuals, do they accurately reflect reality?</td>
+                        <td class="group2">
                             <input type="radio" name="q14" value="yes"> Yes
                             <input type="radio" name="q14" value="no"> No
                             <input type="radio" name="q14" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>15. If you're highlighting one positive aspect, are you also ensuring it doesn't mask significant negative impacts?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">15. Are you ensuring one positive aspect doesn't mask significant negative impacts?</td>
+                        <td class="group">
                             <input type="radio" name="q15" value="yes"> Yes
                             <input type="radio" name="q15" value="no"> No
-                            <input type="radio" name="q15" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>16. If you're using aggregated environmental scores (like a single sustainability rating), is it approved by the EU?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">16. If you're using aggregated environmental scores, is it approved by the EU?</td>
+                        <td class="group2">
                             <input type="radio" name="q16" value="yes"> Yes
                             <input type="radio" name="q16" value="no"> No
                             <input type="radio" name="q16" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>17. If comparing items, are you comparing only with products that serve the same function?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">17. If comparing items, are you comparing only with products that serve the same function?</td>
+                        <td class="group2">
                             <input type="radio" name="q17" value="yes"> Yes
                             <input type="radio" name="q17" value="no"> No
                             <input type="radio" name="q17" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>18. If comparing items o evaluaciones anteriores, are your comparisons fact-based, significant, and verifiable?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">18. If comparing items or previous assessments, are they fact-based, significant, and verifiable?</td>
+                        <td class="group2">
                             <input type="radio" name="q18" value="yes"> Yes
                             <input type="radio" name="q18" value="no"> No
                             <input type="radio" name="q18" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>19. If you're claiming carbon neutrality, have you disclosed whether it's achieved through emission reductions or carbon offsets?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">19. If you claim carbon neutrality, have you explained if it's via cuts or offsets?</td>
+                        <td class="group2">
                             <input type="radio" name="q19" value="yes"> Yes
                             <input type="radio" name="q19" value="no"> No
                             <input type="radio" name="q19" value="na"> No aplicable
                         </td>
                     </tr>
-                    <tr class="questions">
-                        <td>20. If you're claiming carbon neutrality, have you provided details on your offset programs, including their real-world impact?</td>
-                        <td colspan="3" style="text-align: right;">
+                    <tr>
+                        <td class="question">20. If you claim carbon neutrality, have you provided details on your offset programs?</td>
+                        <td class="group2">
                             <input type="radio" name="q20" value="yes"> Yes
                             <input type="radio" name="q20" value="no"> No
                             <input type="radio" name="q20" value="na"> No aplicable
@@ -254,5 +230,29 @@
     </div>
     <script src="js/main.js"></script>
 </body>
+<footer>
+    <h3>Last step: Enter your info to see your green claim score</h3>
+    <p class="fSubtitle">We’ll share with you your results along with tips on how to improve your sustainability claims.</p>
+    <form action="">
+        <div class="inputsDiv">
+            <input placeholder="Your last name" class="input1" type="text">
+            <input  placeholder="Your first name" class="input1" type="text">
+        </div>
+        <input placeholder="your-email@email.com" class="input1 input2" type="mail">
+        <div class="checkBoxContainer">
+            <label class="checkbox">
+                <input type="checkbox"> I want to stay up-to-date about Sustainability news in the Fashion Industry.
+            </label>
+            <label class="checkbox">
+                <input type="checkbox"> I have read and accept the <span style="color: #CCAA5B;">Privacy Policy</span>.
+            </label>
+        </div>
+        
+    </form>
+    <button class="checkButton">
+        <p>Check your results</p>
+    </button>
+    <p class="warning">⚠️ This cheat sheet sums up the Green Claims Directive and Green Claims Code. Please note that it's not legal advice, but a quick way to spot risks.</p>
+</footer>
 
 </html>

@@ -1,6 +1,7 @@
 *{
 font-family: sans-serif;
 color: #32302c;
+scroll-behavior: smooth;
 }
 
 header{
@@ -9,16 +10,254 @@ header{
 }
 
 .container{
-    max-width: 85%;
-    margin: auto;
+  padding: 60px;
+  max-width:1440px;
+  margin: auto;
+  background-color: #FFF;
 }
 
 .eco-guide-title{
-    font-weight: bolder;
-    font-size: 35px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  max-width: 1000px;
+  color:  #1C1C32;
+  font-family: Moderat;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 74px;
 }
+
+.subtitle{
+  max-width: 1000px;
+  color: #1C1C32;
+  font-family: Moderat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  opacity: 0.6;
+}
+
+.startNow{
+  display: inline-flex;
+  height: 44px;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 87px;
+  background: #D1A94C;
+}
+
+.startNow p{
+  color: #FFF;
+  text-align: center;
+  font-family: Moderat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.answerThese{
+  max-width: 1000px;
+  color: #1C1C32;
+  font-family: Moderat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px;
+  opacity: 0.6;
+}
+
+.question{
+  max-width: 957px;
+  color: #1C1C32;
+  font-family: Moderat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  opacity: 0.6;
+}
+
+.group{
+  max-width: 146px;
+  color: #1C1C32;
+  text-align: left;
+  font-family: Moderat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  opacity: 0.6;
+  padding-left: 50px;
+}
+
+.group2{
+  max-width: 313px;
+  color: #1C1C32;
+  text-align: left;
+  font-family: Moderat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  opacity: 0.6;
+  padding-left: 50px;
+}
+
+footer{
+  max-width: 1440px;
+  height: 766px;
+  flex-shrink: 0;
+  background: #1E2032;
+  padding: 60px;
+  margin: auto;
+}
+
+footer h3{
+  display: flex;
+  width: 1087px;
+  height: 41px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFF;
+  font-family: Moderat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.4px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.fSubtitle{
+  color: #FFF;
+  font-family: Moderat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+.inputsDiv{
+  max-width: 881px;
+  display: flex;
+  gap: 40px;
+}
+
+.input1{
+  display: flex;
+  width: 350px;
+  height: 50px;
+  padding: 0px 0.932px 0px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid #FFF;
+  padding-left: 10px;
+  color: #FFF;
+  font-family: Moderat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+
+.input2{
+  width: 750px;
+}
+
+.checkBoxContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.checkbox{
+  color: #FFF;
+  font-family: "SF Pro Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.checkbox input[type="checkbox"] {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #FFFFFF;
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: #D1A94C;
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+  
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkButton{
+  display: inline-flex;
+  height: 44px;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 87px;
+  background: #D1A94C;
+}
+
+.checkButton p{
+  color:  #FFF;
+  text-align: center;
+  font-family: Moderat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.warning{
+  width: 750px;
+  color: #FFF;
+  font-family: Moderat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  opacity: 0.6;
+}
+
+
+
+
+
+
 
 .answer-option:checked + .label {
     background-color: #cce5ff; 
@@ -26,9 +265,6 @@ header{
     padding: 5px; 
 }
 
-h2{
-    margin-bottom: 0;
-}
 
 .measuring{
     margin-top: 5px;
