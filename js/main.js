@@ -28,9 +28,6 @@ function updateYesCount() {
         }
     }
 
-    console.log("anseeeeeee ", answerCount)
-    console.log("TTTTTTTTTT ", formSubmitted)
-
     if ((answerCount == 20) &&  (formSubmitted == true)) {
         document.querySelector('.containerChart').style.display = 'flex'; 
         document.querySelector('.chartTitleSection').style.display = 'flex';
@@ -61,7 +58,6 @@ function updateYesCount() {
 
 function setFormSubmittedTrue() {
     formSubmitted = true;
-    console.log("Formulario enviado correctamente.", formSubmitted);
     updateYesCount()
   }
 
