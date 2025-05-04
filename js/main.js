@@ -101,7 +101,7 @@ function updateChart(yesCount) {
     const chartData = {
         
         datasets: [{
-            label: 'Cantidad de respuestas',
+            label: 'Number of responses',
             data: [yesCount, 20 - yesCount],
             backgroundColor: [chartColor, '#CACACA'],
         }]

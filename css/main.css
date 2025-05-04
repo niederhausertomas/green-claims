@@ -152,7 +152,7 @@ footer{
 }
 
 .warning{
-  width: 750px;
+  max-width: 750px;
   color: #FFF;
   font-family: Moderat;
   font-size: 16px;
