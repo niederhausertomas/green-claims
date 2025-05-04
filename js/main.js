@@ -1,13 +1,18 @@
 let yesCount = 0;
 let answerCount = 0;
+let chartColor = "#2c95e9";
+let formSubmitted = false;
 
-// Agregar evento de clic al botón Start now
+
+
 document.querySelector('.startNow').addEventListener('click', function() {
     const questionsForm = document.getElementById('questionsForm');
     questionsForm.scrollIntoView({ 
         behavior: 'smooth' 
     });
 });
+
+
 
 function updateYesCount() {
     yesCount = 0; 
@@ -23,16 +28,44 @@ function updateYesCount() {
         }
     }
 
-    if (answerCount === 20) {
+    console.log("anseeeeeee ", answerCount)
+    console.log("TTTTTTTTTT ", formSubmitted)
+
+    if ((answerCount == 20) &&  (formSubmitted == true)) {
         document.querySelector('.containerChart').style.display = 'flex'; 
-        document.getElementById('questionsForm').style.display = 'none'; 
+        document.querySelector('.chartTitleSection').style.display = 'flex';
+        document.querySelector('.footer').style.backgroundColor = '#CACACA';
+        document.querySelector('.footer').style.height = '300px';
+
+        document.querySelector('.footerFormSection').style.display = 'none';
+        document.querySelector('.footerFormSection2').style.display = 'block';
+
+
+        document.getElementById('section1').style.display = 'none'; 
     } else {
         document.querySelector('.containerChart').style.display = 'none'; 
-        document.getElementById('questionsForm').style.display = 'block';
+        document.querySelector('.chartTitleSection').style.display = 'none'; 
+        document.querySelector('.footer').style.backgroundColor = '#1E2032';
+        document.querySelector('.footerFormSection').style.display = 'block';
+        document.querySelector('.footerFormSection2').style.display = 'none';
+
+        
+        
+        document.getElementById('section1').style.display = 'block'; 
+         
+
     }
 
     updateChart(yesCount);
 }
+
+function setFormSubmittedTrue() {
+    formSubmitted = true;
+    console.log("Formulario enviado correctamente.", formSubmitted);
+    updateYesCount()
+  }
+
+  window.setFormSubmittedTrue = setFormSubmittedTrue;
 
 for (let i = 1; i <= 20; i++) {
     const yesOption = document.querySelector(`input[name="q${i}"][value="yes"]`);
@@ -45,13 +78,36 @@ for (let i = 1; i <= 20; i++) {
 }
 
 function updateChart(yesCount) {
+
+    if(yesCount > 0) {
+        chartColor = "#84434C" 
+        document.getElementById('redPractice').style.display = 'block'; 
+        document.getElementById('yellowPractice').style.display = 'none'; 
+        document.getElementById('greenPractice').style.display = 'none'; 
+
+    }
+    
+    if(yesCount > 9) {
+        chartColor = "#D1A94C"
+        document.getElementById('redPractice').style.display = 'none'; 
+        document.getElementById('yellowPractice').style.display = 'block'; 
+        document.getElementById('greenPractice').style.display = 'none'; 
+    }
+    
+    if(yesCount > 14) {
+        chartColor = "#8A978F"
+        document.getElementById('redPractice').style.display = 'none'; 
+        document.getElementById('yellowPractice').style.display = 'none'; 
+        document.getElementById('greenPractice').style.display = 'block'; 
+    }
+
     const ctx = document.getElementById('scoreChart').getContext('2d');
     const chartData = {
         
         datasets: [{
             label: 'Cantidad de respuestas',
             data: [yesCount, 20 - yesCount],
-            backgroundColor: ['#2c95e9', '#CACACA'],
+            backgroundColor: [chartColor, '#CACACA'],
         }]
     };
     
@@ -89,7 +145,7 @@ function updateChart(yesCount) {
                 cutout: '80%',
                 elements: {
                     arc: {
-                        borderRadius:  [20, 0]
+                        borderRadius:  [20, 20]
                     }
                 }
             },
@@ -97,3 +153,4 @@ function updateChart(yesCount) {
         });
     }
 }
+
