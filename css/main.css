@@ -1,45 +1,105 @@
-*{
-  font-family: sans-serif;
-  color: #32302c;
-  scroll-behavior: smooth;
+@font-face {
+    font-family: 'Moderat';
+    src: url('../font/Moderat-Regular.woff2') format('woff2'),
+         url('../font/Moderat-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
-header{
-  height: 180px; 
-  overflow: hidden;   
+@font-face {
+    font-family: 'Moderat';
+    src: url('../font/Moderat-Light.woff2') format('woff2'),
+         url('../font/Moderat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Moderat';
+    src: url('../font/Moderat-Medium.woff2') format('woff2'),
+         url('../font/Moderat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+  font-family: 'Moderat';
+}
+
+.navbar {
+  background-color: #FFF;
+  padding: 18px 92px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #1C1C32;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.logo img {
+  width: 183px;
+  height: 39px;
+  flex-shrink: 0;
+  aspect-ratio: 61/13;
+}
+
+.nav-title{
+  color: #1C1C32;
+  text-align: right;
+  font-family: Moderat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .container{
-  padding: 60px;
   max-width:1440px;
-  margin: auto;
+  margin: 0 auto;
   background-color: #FFF;
 }
 
 .eco-guide-title{
   max-width: 1000px;
   color:  #1C1C32;
+  text-align: center;
+  margin: auto;
   font-family: Moderat;
-  font-size: 54px;
+  font-size: 46px;
   font-style: normal;
   font-weight: 500;
-  line-height: 74px;
+  line-height: 49px;
+  margin-top: 100px;
 }
 
 .subtitle{
-  max-width: 1000px;
+  max-width: 630px;
+  margin: 40px auto;
   color: #1C1C32;
+  text-align: center;
   font-family: Moderat;
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 300;
-  line-height: 40px;
+  line-height: 43px;
   opacity: 0.6;
 }
 
 .startNow{
-  display: inline-flex;
-  height: 44px;
+  display: flex;
+  height: 53px;
+  width: 187px;
   padding: 10px 30px;
   justify-content: center;
   align-items: center;
@@ -49,6 +109,8 @@ header{
   border-radius: 87px;
   background: #D1A94C;
   cursor: pointer;
+  margin: 40px auto;
+  scroll-behavior: smooth;
 }
 
 .startNow:hover{
@@ -66,39 +128,110 @@ header{
   transition: color 0.3s ease;
 }
 
+.answerTheseContainer{
+  max-width: 1440px;
+  height: 287px;
+  background-color: #EEEEEF;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .answerThese{
-  max-width: 1000px;
+  max-width: 800px;
+  height: 135px;
   color: #1C1C32;
+  text-align: center;
   font-family: Moderat;
-  font-size: 40px;
+  font-size: 35px;
   font-style: normal;
   font-weight: 400;
-  line-height: 60px;
-  opacity: 0.6;
+  line-height: 53px;
+
+}
+
+.qQuestion{
+  padding: 97px;
+}
+.iconContainer{
+  width: 564px;
+  height: 546px;
+  background-color: #AD614F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.questionNumber{
+  color: #000;
+  font-family: Moderat;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 302;
+  line-height: 50px;
+  letter-spacing: -1.92px;
+  opacity: 0.2;
+}
+
+.question-row {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: none;
+}
+
+.question-row.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.question-row.fade-out {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .question{
-  max-width: 957px;
+  margin-top: 20px;
+  width: 570px;
   color: #1C1C32;
   font-family: Moderat;
-  font-size: 20px;
+  font-size: 35px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 40px;
-  opacity: 0.6;
+  font-weight: 400;
+  line-height: 62px;
 }
 
-.group{
-  max-width: 146px;
+.aButton{
+  margin-top: 60px;
+  padding: 0 40px;
+  height: 62px;
+  flex-shrink: 0;
+  border: 1px solid black;
+  border-radius: 100px;
+  background: #FFF;
   color: #1C1C32;
-  text-align: left;
+  text-align: center;
   font-family: Moderat;
-  font-size: 20px;
+  font-size: 34px;
   font-style: normal;
   font-weight: 300;
-  line-height: 40px;
-  opacity: 0.6;
-  padding-left: 50px;
+  line-height: 53px; 
+  letter-spacing: -0.68px;
+}
+
+.aButton.yes{
+  background-color: #D1A94C;
+  color: #FFF;
+  border: none;
 }
 
 .group2{
@@ -114,45 +247,68 @@ header{
   padding-left: 50px;
 }
 
-footer{
-  max-width: 1200px;
-  height: 600px;
-  flex-shrink: 0;
-  background: #1E2032;
-  padding: 60px;
-  margin: auto;
+.footer {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 1440px;
+    height: 600px;
+    flex-shrink: 0;
+    background: #1E2032;
+    padding: 60px;
+    margin: auto;
+}
+
+.footer.active {
+    display: block;
+}
+
+.footerFormSection {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.footerFormSection.active {
+    opacity: 1;
+}
+
+.footerFormSection2 {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.footerFormSection2.active {
+    opacity: 1;
 }
 
 .footerFormSectionTitle{
   display: flex;
-  width: 1087px;
-  height: 41px;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
   color: #FFF;
   font-family: Moderat;
-  font-size: 40px;
+  font-size: 45px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 40px;
-  letter-spacing: -0.4px;
-  margin-bottom: 20px;
-  margin-top: 0;
+  font-weight: 400;
+  line-height: 58px;
+  margin-bottom: 39px;
+  margin-top: 40;
 }
 
 .fSubtitle{
   color: #FFF;
+  text-align: center;
   font-family: Moderat;
-  font-size: 20px;
+  font-size: 26px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
   margin-bottom: 40px;
 }
 
 .warning{
-  max-width: 750px;
+  text-align: center;
   color: #FFF;
   font-family: Moderat;
   font-size: 16px;
@@ -190,33 +346,6 @@ footer{
     display: flex;
     width: 100%;
     background-color: red;
-}
-
-
-#questionsForm{
-  width: 100%;
-}
-
-.questions {
-    display: flex;
-}
-
-.questions td:first-child {
-    flex: 0 0 85%;
-    align-items: center;
-}
-
-.questions td:last-child {
-    flex: 0 0 20%;
-    justify-content: flex-end;
-    align-items: center;
-    padding-left: 20px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
 }
 
 .containerChart {
@@ -287,10 +416,6 @@ footer{
     color: #1C1C32;
   }
 
-  .footerFormSection2{
-    display: none;
-  }
-
   .footerFormSection2 h3{
     font-family: 'Moderat';
     font-weight: 500;
@@ -321,4 +446,65 @@ footer{
     border: none;
     border-radius: 37px;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 1024px) {
+    
+  }
+
+  /* Media Queries para Móviles (hasta 767px) */
+  @media screen and (max-width: 768px) {
+
+    .navbar {
+      width: 100%;
+      position: fixed;
+      top: 0;
+    }
+    .navbar-container {
+      padding: 26px 60px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 131px;
+      height: 28px;
+      aspect-ratio: 131/28;
+    }
+    
+    .nav-title{
+      display: none;
+    }
+
+    .container{
+      padding: 27px;
+      text-align: center;
+    }
+
+    .eco-guide-title{
+      text-align: center;
+      font-size: 34px;
+      line-height: 52px;
+    }
+
+    .subtitle{
+      text-align: center;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 28px;
+      opacity: 0.6;
+    }
+
+    .startNow{
+      margin-top: 57px;
+      margin-bottom: 57px;
+    }
+
+    .answerThese{  
+      font-size: 24px;
+      line-height: 38px;
+      opacity: 1;
+    }
+    
   }
