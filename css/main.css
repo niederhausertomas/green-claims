@@ -35,7 +35,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #1C1C32;
+  
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -278,6 +278,11 @@
 
 .footerFormSection2.active {
     opacity: 1;
+    background-color: #EEEEEF;
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footerFormSectionTitle{
@@ -356,19 +361,9 @@
   gap: 40px;
 }
 
-.chartTitleSection{
-  display: none;
-  width: 100%;
-  font-family: 'Moderat';
-  font-weight: 500;
-  font-size: 54px;
-  line-height: 74px;
-}
-
-  
   .score-section {
     flex: 1;
-    min-width: 300px;
+    min-width: 460px;
     text-align: center;
   }
   
@@ -387,65 +382,88 @@
   
   .interpretation-block {
     margin-bottom: 30px;
+    padding-left: 60px;
   }
   
-  .interpretation-block .title {
-    margin-top: 70px;
-    margin-left: 40px;
-    max-width: 673px;
-    height: 60px;
-    opacity: 60%;
-    font: "Moderat";
+  .interpretation-block .interpretationTitle {
+    width: 592px;
+    height: 116px;
+    color: #1C1C32;
+    font-family: Moderat;
+    font-size: 39px;
+    font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 60px;
-    color: #1C1C32;
+    line-height: 58px;
   }
   
-  .interpretation-block p {
-    max-width: 633px;
+  .interpretation-block .firstP {
+    width: 662px;
     height: 120px;
-    margin-top: 20px;
-    margin-left: 40px;
-
-    opacity: 60%;
-    font: "Moderat";
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 40px;
     color: #1C1C32;
+    font-family: Moderat;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 40px;
+    margin-top: 34px;
   }
+
+  .interpretation-block .interpretationSubTitle {
+    color: #1C1C32;
+    font-family: Moderat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  .interpretation-block .secondP {
+    width: 690px;
+    color: #1C1C32;
+    font-family: Moderat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  
+
 
   .footerFormSection2 h3{
-    font-family: 'Moderat';
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 40px;
-    color: #FFFFFF;
+    width: 708px;
+    color: #1C1C32;
+    text-align: center;
+    font-family: Moderat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: -0.28px;
+    margin: 70px auto;
   }
 
-  .footerFormSection2 p{
-    font-family: 'Moderat';
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 40px;
-    color: #FFFFFF;
-  }
 
   .footerFormSection2 button{
-    width: 270px;
-    height: 44px;
+    width: 458px;
+    height: 60px;
     padding: 0px 30px;
     background-color: #D1A94C;
-    font-family: 'Moderat';
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 36px;
-    color: #FFFFFF;
+    color: #FFF;
     text-align: center;
+    font-family: Moderat;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 53px; /* 196.296% */
+    letter-spacing: -0.54px;
+    border-radius: 100px;
     border: none;
-    border-radius: 37px;
     cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 40px;
   }
 
   @media screen and (max-width: 1024px) {

@@ -254,7 +254,7 @@ function showNextQuestion() {
                     footerFormSection.classList.add('active');
                 }
             }
-        }, 400);
+        }, 0);
     }
 }
 
@@ -274,9 +274,8 @@ function updateYesCount() {
 
     if ((answerCount === questions.length) && (formSubmitted === true)) {
         document.querySelector('.containerChart').style.display = 'flex'; 
-        document.querySelector('.chartTitleSection').style.display = 'flex';
         document.querySelector('.footer').style.backgroundColor = '#CACACA';
-        document.querySelector('.footer').style.height = '300px';
+        document.querySelector('.footer').style.display = 'none';
 
         document.querySelector('.footerFormSection').classList.remove('active');
         document.querySelector('.footerFormSection2').classList.add('active');
@@ -284,7 +283,6 @@ function updateYesCount() {
         document.getElementById('section1').style.display = 'none'; 
     } else {
         document.querySelector('.containerChart').style.display = 'none'; 
-        document.querySelector('.chartTitleSection').style.display = 'none'; 
         document.querySelector('.footer').style.backgroundColor = '#1E2032';
         document.querySelector('.footerFormSection').classList.add('active');
         document.querySelector('.footerFormSection2').classList.remove('active');
@@ -373,6 +371,8 @@ function updateChart(yesCount) {
             label: 'Number of responses',
             data: [yesCount, 20 - yesCount],
             backgroundColor: [chartColor, '#CACACA'],
+            borderRadius: [20, 0],
+            borderWidth: 0
         }]
     };
     
