@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bcome</title>
+    <meta name="description" content="Green Claims Cheat Sheet for Fashion - A practical guide to assess your green claims">
+    <title>Bcome - Green Claims Cheat Sheet</title>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
+    
+    <!-- External Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/dist/umd/i18next.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
@@ -12,22 +17,22 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo">
-                <img src="images/BCome-logo.png" alt="B-Come Logo">
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <img src="images/BCome-logo.png" alt="B-Come Logo">
+                </div>
+                <div>
+                    <p class="nav-title">Green Claims Cheat Sheet for Fashion</p>
+                </div>
             </div>
-            <div>
-                <p class="nav-title">Green Claims Cheat Sheet for Fashion</p>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <div class="container">
-    
-        <div id="section1">
+    <main class="container">
+        <section id="section1" class="intro-section">
             <h1 class="eco-guide-title">Green Claims Cheat Sheet for Fashion</h1>
-
             <h2 class="subtitle">Avoid greenwashing following this practical guide to assess whether your green claims follow best communication practices, EU regulations, and consumer expectations.</h2>
 
             <button class="startNow">
@@ -39,103 +44,109 @@
             </div>
 
             <form id="questionsForm" onsubmit="handleSubmit(event)">
-                <!-- Las preguntas se generarán dinámicamente aquí -->
+                <!-- Questions will be dynamically generated here -->
             </form>
+        </section>
 
-        </div>
-        
-
-        <div class="containerChart">
+        <section class="containerChart">
             <div class="score-section">
-              <canvas id="scoreChart" width="200" height="200"></canvas>
+                <canvas id="scoreChart" width="200" height="200"></canvas>
             </div>
       
             <div class="interpretation-section">
-      
-              <div id="greenPractice" class="interpretation-block">
-                <div class="interpretationTitle">
-                    <strong>Great job! Your green claim is well structured</strong>
-                  </div>
-                  <p class="firstP">
-                    It meets key regulatory standards and communicates your message with clarity, that already puts you in a position of leadership. But there's always room to go further.
-                  </p>
-                  <h3 class="interpretationSubTitle">What could we do together from here?</h3>
-                  <p class="secondP">
-                      • Integrate your claim into your broader brand storytelling.<br>
-                      • Adapt it for different formats (campaigns, labelling, social media…).<br>
-                      • Explore how it can become a true competitive advantage.
-                  </p>
-              </div>
-      
-              <div id="yellowPractice" class="interpretation-block">
-                <div class="interpretationTitle">
-                    <strong>Your green claim has potential,<br> 
-                        but it needs refining</strong>
-                  </div>
-                  <p class="firstP">
-                    You're on the right track, but there's still room to strengthen your message so it resonates clearly with both consumers and regulatory standards.
-                  </p>
-                  <h3 class="interpretationSubTitle">Here's what we could work on together:</h3>
-                  <p class="secondP">
-                      • Clarify your data: Make metrics and sources more specific.<br>
-                      • Refine your tone: Striking the right balance between approachable and credible.<br>
-                      • Optimize the format: So it's easy to understand and stands out across all channels.
-                  </p>
-              </div>
-      
-              <div id="redPractice" class="interpretation-block">
-                <div class="interpretationTitle">
-                  <strong>No worries,<br> 
-                    your claim can be fixed</strong>
+                <div id="greenPractice" class="interpretation-block">
+                    <div class="interpretationTitle">
+                        <strong>Great job! Your green claim is well structured</strong>
+                    </div>
+                    <p class="firstP">
+                        It meets key regulatory standards and communicates your message with clarity, that already puts you in a position of leadership. But there's always room to go further.
+                    </p>
+                    <h3 class="interpretationSubTitle">What could we do together from here?</h3>
+                    <p class="secondP">
+                        • Integrate your claim into your broader brand storytelling.<br>
+                        • Adapt it for different formats (campaigns, labelling, social media…).<br>
+                        • Explore how it can become a true competitive advantage.
+                    </p>
+                    <a target="_blank" href="https://meetings.hubspot.com/bcome-demo/intro?uuid=30e2b634-17b0-4e93-89dc-5eb19abbbffb">
+                        <button class="footerFormSectionButton">Amplify the impact of your message</button>
+                    </a>
                 </div>
-                <p class="firstP">
-                    Right now, your message may come across as vague, overly generic, or not fully aligned with regulatory requirements. But you're in the right place to turn that around.
-                </p>
-                <h3 class="interpretationSubTitle">Here's how we can help:</h3>
-                <p class="secondP">
-                    • Clarify: Remove ambiguity and vague language.<br>
-                    • Substantiate: Back your message with clear, credible evidence.<br>
-                    • Reshape: Adjust the tone and structure for transparency and impact.
-                </p>
-              </div>
-
+      
+                <div id="yellowPractice" class="interpretation-block">
+                    <div class="interpretationTitle">
+                        <strong>Your green claim has potential,<br> 
+                            but it needs refining</strong>
+                    </div>
+                    <p class="firstP">
+                        You're on the right track, but there's still room to strengthen your message so it resonates clearly with both consumers and regulatory standards.
+                    </p>
+                    <h3 class="interpretationSubTitle">Here's what we could work on together:</h3>
+                    <p class="secondP">
+                        • Clarify your data: Make metrics and sources more specific.<br>
+                        • Refine your tone: Striking the right balance between approachable and credible.<br>
+                        • Optimize the format: So it's easy to understand and stands out across all channels.
+                    </p>
+                    <a target="_blank" href="https://meetings.hubspot.com/bcome-demo/intro?uuid=30e2b634-17b0-4e93-89dc-5eb19abbbffb">
+                        <button class="footerFormSectionButton">Turn your message into your competitive advantage</button>
+                    </a>
+                </div>
+      
+                <div id="redPractice" class="interpretation-block">
+                    <div class="interpretationTitle">
+                        <strong>No worries,<br> 
+                            your claim can be fixed</strong>
+                    </div>
+                    <p class="firstP">
+                        Right now, your message may come across as vague, overly generic, or not fully aligned with regulatory requirements. But you're in the right place to turn that around.
+                    </p>
+                    <h3 class="interpretationSubTitle">Here's how we can help:</h3>
+                    <p class="secondP">
+                        • Clarify: Remove ambiguity and vague language.<br>
+                        • Substantiate: Back your message with clear, credible evidence.<br>
+                        • Reshape: Adjust the tone and structure for transparency and impact.
+                    </p>
+                    <a target="_blank" href="https://meetings.hubspot.com/bcome-demo/intro?uuid=30e2b634-17b0-4e93-89dc-5eb19abbbffb">
+                        <button class="footerFormSectionButton">Put your green claims in expert hands</button>
+                    </a>
+                </div>
             </div>
 
             <div class="footerFormSection2">
-                <h3>Because good communication isn't just about compliance, it's about standing out.</h3>
-                <a href="mailto:info@bcome.biz">
-                    <button >
-                        Build trust through impact
-                    </button>
-                </a>
+               
             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footerFormSection">    
+            <h3 class="footerFormSectionTitle">Last step: Enter your info to see your green claim score</h3>
+            <p class="fSubtitle">We'll share with you your results along with tips on how to improve your sustainability claims.</p>
+
+            <script>
+                const url = window.location.href;
+                if(url.includes("ref=es")) {
+                    var formId = "1ac359c7-e18d-45c8-a42f-9b710ad789e3";
+                } else {
+                    var formId = "574dc52d-08de-411e-b07f-008a2d339e85";
+                }
+                hbspt.forms.create({
+                    portalId: "14566251",
+                    formId: formId,
+                    region: "na1",
+                    onFormSubmit: function($form) {
+                        if (typeof window.setFormSubmittedTrue === 'function') {
+                            window.setFormSubmittedTrue();
+                        }
+                    }
+                });
+            </script>
+
+            <p class="warning">⚠️ This cheat sheet sums up the Green Claims Directive and Green Claims Code. Please note that it's not legal advice, but a quick way to spot risks.</p>
         </div>
-    </div>
+    </footer>
+
+    <!-- Application Scripts -->
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
-<footer class="footer">
-    <div class="footerFormSection">    
-        <h3  class="footerFormSectionTitle">Last step: Enter your info to see your green claim score</h3>
-        <p class="fSubtitle">We'll share with you your results along with tips on how to improve your sustainability claims.</p>
-
-        <script>
-            hbspt.forms.create({
-            portalId: "14566251",
-            formId: "574dc52d-08de-411e-b07f-008a2d339e85",
-            region: "na1",
-            onFormSubmit: function($form) {
-                if (typeof window.setFormSubmittedTrue === 'function') {
-                    window.setFormSubmittedTrue();
-                }
-            }
-            });
-        </script>
-
-        <p class="warning">⚠️ This cheat sheet sums up the Green Claims Directive and Green Claims Code. Please note that it's not legal advice, but a quick way to spot risks.</p>
-    </div>
-
-
-</footer>
-
 </html>
